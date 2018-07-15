@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F440F18020FB167F008F4DF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F17F20FB167F008F4DF5 /* AppDelegate.swift */; };
-		F440F18220FB167F008F4DF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F18120FB167F008F4DF5 /* ViewController.swift */; };
+		F440F18220FB167F008F4DF5 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F18120FB167F008F4DF5 /* UserListViewController.swift */; };
 		F440F18520FB167F008F4DF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F440F18320FB167F008F4DF5 /* Main.storyboard */; };
 		F440F18720FB1680008F4DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F440F18620FB1680008F4DF5 /* Assets.xcassets */; };
 		F440F18A20FB1680008F4DF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F440F18820FB1680008F4DF5 /* LaunchScreen.storyboard */; };
@@ -21,12 +21,14 @@
 		F440F1A320FB1B76008F4DF5 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F19D20FB1B76008F4DF5 /* DataLoader.swift */; };
 		F440F1A420FB1B76008F4DF5 /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F19E20FB1B76008F4DF5 /* UserProvider.swift */; };
 		F440F1A520FB1B76008F4DF5 /* RequestToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F19F20FB1B76008F4DF5 /* RequestToken.swift */; };
+		F440F1AC20FB2CF9008F4DF5 /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F1AA20FB2CF9008F4DF5 /* UserListTableViewCell.swift */; };
+		F440F1AD20FB2CF9008F4DF5 /* UserListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F440F1AB20FB2CF9008F4DF5 /* UserListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F440F17C20FB167F008F4DF5 /* UserListsMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserListsMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F440F17F20FB167F008F4DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F440F18120FB167F008F4DF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F440F18120FB167F008F4DF5 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		F440F18420FB167F008F4DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F440F18620FB1680008F4DF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F440F18920FB1680008F4DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +42,8 @@
 		F440F19D20FB1B76008F4DF5 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		F440F19E20FB1B76008F4DF5 /* UserProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
 		F440F19F20FB1B76008F4DF5 /* RequestToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestToken.swift; sourceTree = "<group>"; };
+		F440F1AA20FB2CF9008F4DF5 /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
+		F440F1AB20FB2CF9008F4DF5 /* UserListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 				F440F19120FB17B8008F4DF5 /* Model */,
 				F440F19220FB17BF008F4DF5 /* ViewModel */,
 				F440F1A620FB1FF7008F4DF5 /* Controller */,
+				F440F1A720FB2CB6008F4DF5 /* View */,
 				F440F18620FB1680008F4DF5 /* Assets.xcassets */,
 				F440F18820FB1680008F4DF5 /* LaunchScreen.storyboard */,
 				F440F18B20FB1680008F4DF5 /* Info.plist */,
@@ -118,9 +123,18 @@
 		F440F1A620FB1FF7008F4DF5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F440F18120FB167F008F4DF5 /* ViewController.swift */,
+				F440F18120FB167F008F4DF5 /* UserListViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		F440F1A720FB2CB6008F4DF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F440F1AA20FB2CF9008F4DF5 /* UserListTableViewCell.swift */,
+				F440F1AB20FB2CF9008F4DF5 /* UserListTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F440F1AD20FB2CF9008F4DF5 /* UserListTableViewCell.xib in Resources */,
 				F440F18A20FB1680008F4DF5 /* LaunchScreen.storyboard in Resources */,
 				F440F18720FB1680008F4DF5 /* Assets.xcassets in Resources */,
 				F440F18520FB167F008F4DF5 /* Main.storyboard in Resources */,
@@ -194,10 +209,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F440F18220FB167F008F4DF5 /* ViewController.swift in Sources */,
+				F440F18220FB167F008F4DF5 /* UserListViewController.swift in Sources */,
 				F440F19720FB19B9008F4DF5 /* UserViewModel.swift in Sources */,
 				F440F1A220FB1B76008F4DF5 /* FakeData.swift in Sources */,
 				F440F18020FB167F008F4DF5 /* AppDelegate.swift in Sources */,
+				F440F1AC20FB2CF9008F4DF5 /* UserListTableViewCell.swift in Sources */,
 				F440F1A020FB1B76008F4DF5 /* NetworkResult.swift in Sources */,
 				F440F19520FB17FA008F4DF5 /* User.swift in Sources */,
 				F440F1A120FB1B76008F4DF5 /* PaserKey.swift in Sources */,
