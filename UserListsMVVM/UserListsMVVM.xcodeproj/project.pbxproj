@@ -12,6 +12,15 @@
 		F440F18520FB167F008F4DF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F440F18320FB167F008F4DF5 /* Main.storyboard */; };
 		F440F18720FB1680008F4DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F440F18620FB1680008F4DF5 /* Assets.xcassets */; };
 		F440F18A20FB1680008F4DF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F440F18820FB1680008F4DF5 /* LaunchScreen.storyboard */; };
+		F440F19520FB17FA008F4DF5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F19420FB17FA008F4DF5 /* User.swift */; };
+		F440F19720FB19B9008F4DF5 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F19620FB19B9008F4DF5 /* UserViewModel.swift */; };
+		F440F19920FB1ACD008F4DF5 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F19820FB1ACD008F4DF5 /* UserListViewModel.swift */; };
+		F440F1A020FB1B76008F4DF5 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F19A20FB1B76008F4DF5 /* NetworkResult.swift */; };
+		F440F1A120FB1B76008F4DF5 /* PaserKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F19B20FB1B76008F4DF5 /* PaserKey.swift */; };
+		F440F1A220FB1B76008F4DF5 /* FakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F19C20FB1B76008F4DF5 /* FakeData.swift */; };
+		F440F1A320FB1B76008F4DF5 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F19D20FB1B76008F4DF5 /* DataLoader.swift */; };
+		F440F1A420FB1B76008F4DF5 /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F19E20FB1B76008F4DF5 /* UserProvider.swift */; };
+		F440F1A520FB1B76008F4DF5 /* RequestToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F19F20FB1B76008F4DF5 /* RequestToken.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		F440F18620FB1680008F4DF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F440F18920FB1680008F4DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F440F18B20FB1680008F4DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F440F19420FB17FA008F4DF5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F440F19620FB19B9008F4DF5 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		F440F19820FB1ACD008F4DF5 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		F440F19A20FB1B76008F4DF5 /* NetworkResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		F440F19B20FB1B76008F4DF5 /* PaserKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaserKey.swift; sourceTree = "<group>"; };
+		F440F19C20FB1B76008F4DF5 /* FakeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeData.swift; sourceTree = "<group>"; };
+		F440F19D20FB1B76008F4DF5 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		F440F19E20FB1B76008F4DF5 /* UserProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
+		F440F19F20FB1B76008F4DF5 /* RequestToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestToken.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +73,54 @@
 			isa = PBXGroup;
 			children = (
 				F440F17F20FB167F008F4DF5 /* AppDelegate.swift */,
-				F440F18120FB167F008F4DF5 /* ViewController.swift */,
 				F440F18320FB167F008F4DF5 /* Main.storyboard */,
+				F440F19320FB17C5008F4DF5 /* NetworkService */,
+				F440F19120FB17B8008F4DF5 /* Model */,
+				F440F19220FB17BF008F4DF5 /* ViewModel */,
+				F440F1A620FB1FF7008F4DF5 /* Controller */,
 				F440F18620FB1680008F4DF5 /* Assets.xcassets */,
 				F440F18820FB1680008F4DF5 /* LaunchScreen.storyboard */,
 				F440F18B20FB1680008F4DF5 /* Info.plist */,
 			);
 			path = UserListsMVVM;
+			sourceTree = "<group>";
+		};
+		F440F19120FB17B8008F4DF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F440F19420FB17FA008F4DF5 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F440F19220FB17BF008F4DF5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F440F19620FB19B9008F4DF5 /* UserViewModel.swift */,
+				F440F19820FB1ACD008F4DF5 /* UserListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F440F19320FB17C5008F4DF5 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				F440F19E20FB1B76008F4DF5 /* UserProvider.swift */,
+				F440F19D20FB1B76008F4DF5 /* DataLoader.swift */,
+				F440F19C20FB1B76008F4DF5 /* FakeData.swift */,
+				F440F19A20FB1B76008F4DF5 /* NetworkResult.swift */,
+				F440F19B20FB1B76008F4DF5 /* PaserKey.swift */,
+				F440F19F20FB1B76008F4DF5 /* RequestToken.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		F440F1A620FB1FF7008F4DF5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F440F18120FB167F008F4DF5 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +195,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F440F18220FB167F008F4DF5 /* ViewController.swift in Sources */,
+				F440F19720FB19B9008F4DF5 /* UserViewModel.swift in Sources */,
+				F440F1A220FB1B76008F4DF5 /* FakeData.swift in Sources */,
 				F440F18020FB167F008F4DF5 /* AppDelegate.swift in Sources */,
+				F440F1A020FB1B76008F4DF5 /* NetworkResult.swift in Sources */,
+				F440F19520FB17FA008F4DF5 /* User.swift in Sources */,
+				F440F1A120FB1B76008F4DF5 /* PaserKey.swift in Sources */,
+				F440F1A420FB1B76008F4DF5 /* UserProvider.swift in Sources */,
+				F440F19920FB1ACD008F4DF5 /* UserListViewModel.swift in Sources */,
+				F440F1A520FB1B76008F4DF5 /* RequestToken.swift in Sources */,
+				F440F1A320FB1B76008F4DF5 /* DataLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
