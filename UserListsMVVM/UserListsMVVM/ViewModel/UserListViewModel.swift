@@ -10,11 +10,11 @@ import Foundation
 
 struct UserListViewModel {
     var title: String? = "User List"
-    var users :[UserViewModel] = [UserViewModel]()
+    var users: [UserViewModel] = [UserViewModel]()
 }
 
 extension UserListViewModel {
-    init(users :[UserViewModel]) {
+    init(users: [UserViewModel]) {
         self.users = users
     }
 }

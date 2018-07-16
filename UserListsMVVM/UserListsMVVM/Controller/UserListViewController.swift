@@ -30,7 +30,7 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
         
         self.tableView.tableFooterView = UIView()
         
-        self.title = viewModel.title
+        self.title = self.viewModel.title
         
         self.loadUsers()
     }
@@ -72,6 +72,19 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
         }
         
         return cell
+    }
+    
+    //MARK: <TableView Datasource>
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let pvc = storyboard.instantiateViewController(withIdentifier: "UserDetailViewController") as? UserDetailViewController else {
+            return
+        }
+        pvc.viewModel = UserDetailViewModel(user: self.viewModel.users[indexPath.row])
+        self.navigationController?.pushViewController(pvc, animated: true)
     }
 }
 

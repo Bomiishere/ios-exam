@@ -23,6 +23,8 @@
 		F440F1A520FB1B76008F4DF5 /* RequestToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F19F20FB1B76008F4DF5 /* RequestToken.swift */; };
 		F440F1AC20FB2CF9008F4DF5 /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F1AA20FB2CF9008F4DF5 /* UserListTableViewCell.swift */; };
 		F440F1AD20FB2CF9008F4DF5 /* UserListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F440F1AB20FB2CF9008F4DF5 /* UserListTableViewCell.xib */; };
+		F440F1AF20FB31FC008F4DF5 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F1AE20FB31FC008F4DF5 /* UserDetailViewController.swift */; };
+		F440F1B120FB3461008F4DF5 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F1B020FB3461008F4DF5 /* UserDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		F440F19F20FB1B76008F4DF5 /* RequestToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestToken.swift; sourceTree = "<group>"; };
 		F440F1AA20FB2CF9008F4DF5 /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
 		F440F1AB20FB2CF9008F4DF5 /* UserListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListTableViewCell.xib; sourceTree = "<group>"; };
+		F440F1AE20FB31FC008F4DF5 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		F440F1B020FB3461008F4DF5 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 			children = (
 				F440F19620FB19B9008F4DF5 /* UserViewModel.swift */,
 				F440F19820FB1ACD008F4DF5 /* UserListViewModel.swift */,
+				F440F1B020FB3461008F4DF5 /* UserDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				F440F18120FB167F008F4DF5 /* UserListViewController.swift */,
+				F440F1AE20FB31FC008F4DF5 /* UserDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -211,6 +217,8 @@
 			files = (
 				F440F18220FB167F008F4DF5 /* UserListViewController.swift in Sources */,
 				F440F19720FB19B9008F4DF5 /* UserViewModel.swift in Sources */,
+				F440F1B120FB3461008F4DF5 /* UserDetailViewModel.swift in Sources */,
+				F440F1AF20FB31FC008F4DF5 /* UserDetailViewController.swift in Sources */,
 				F440F1A220FB1B76008F4DF5 /* FakeData.swift in Sources */,
 				F440F18020FB167F008F4DF5 /* AppDelegate.swift in Sources */,
 				F440F1AC20FB2CF9008F4DF5 /* UserListTableViewCell.swift in Sources */,
