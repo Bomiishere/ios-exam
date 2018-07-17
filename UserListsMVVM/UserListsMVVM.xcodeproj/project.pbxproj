@@ -115,12 +115,11 @@
 		F440F19320FB17C5008F4DF5 /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
-				F440F19E20FB1B76008F4DF5 /* UserProvider.swift */,
 				F440F19D20FB1B76008F4DF5 /* DataLoader.swift */,
-				F440F19C20FB1B76008F4DF5 /* FakeData.swift */,
 				F440F19A20FB1B76008F4DF5 /* NetworkResult.swift */,
 				F440F19B20FB1B76008F4DF5 /* PaserKey.swift */,
 				F440F19F20FB1B76008F4DF5 /* RequestToken.swift */,
+				F440F1B220FD9DC6008F4DF5 /* DataProvider */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -141,6 +140,15 @@
 				F440F1AB20FB2CF9008F4DF5 /* UserListTableViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F440F1B220FD9DC6008F4DF5 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				F440F19E20FB1B76008F4DF5 /* UserProvider.swift */,
+				F440F19C20FB1B76008F4DF5 /* FakeData.swift */,
+			);
+			path = DataProvider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

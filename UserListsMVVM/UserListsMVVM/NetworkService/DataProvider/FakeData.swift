@@ -8,7 +8,7 @@
 
 import Foundation
 
-let fakeData:Dictionary = ["users": [
+let fakeData: Dictionary = ["users": [
     ["id":"0", "first_name": "i", "last_name":"Mob"],
     ["id":"1", "first_name": "Aiwen", "last_name" : ""],
     ["id":"2", "first_name": "Sam", "last_name" : "Wang"],

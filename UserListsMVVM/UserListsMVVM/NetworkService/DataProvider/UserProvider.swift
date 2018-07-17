@@ -57,15 +57,6 @@ class UserProvider: UserProvidable {
                 
                 do {
                     //parse
-//                    var data = try JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject]
-                    
-//                    data = fakeData as [String : AnyObject]
-                    
-//                    guard let usersArr = data?[ParserKey.users] as? [AnyObject]  else {
-//                        completion (nil, NetworkError.parseError)
-//                        return
-//                    }
-
                     let usersJson = try JSONSerialization.jsonObject(with: data, options: [])
                     
                     guard let usersJsonObject = usersJson as? [NSDictionary] else {
