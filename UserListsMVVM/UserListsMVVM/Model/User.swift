@@ -9,18 +9,18 @@
 import Foundation
 
 struct User: Codable  {
-    let id : String
+    let id : Int
     let firstName : String?
     let lastName : String?
     let birthday : String?
-    let age : String?
+    let age : Int?
     let email : String?
     let mobile : String?
     let address : String?
     let contactPerson : String?
     let contactPersonPhone : String?
     
-    init(id: String, firstName: String? = nil, lastName: String? = nil, birthday: String? = nil, age: String? = nil, email: String? = nil, mobile: String? = nil, address: String? = nil, contactPerson: String? = nil, contactPersonPhone: String? = nil) {
+    init(id: Int, firstName: String? = nil, lastName: String? = nil, birthday: String? = nil, age: Int? = nil, email: String? = nil, mobile: String? = nil, address: String? = nil, contactPerson: String? = nil, contactPersonPhone: String? = nil) {
         self.id = id
         self.firstName = firstName
         self.lastName = lastName

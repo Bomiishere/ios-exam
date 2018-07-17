@@ -23,11 +23,11 @@ struct UserViewModel {
 
 extension UserViewModel {
     init(user: User) {
-        self.id = user.id
+        self.id = "\(user.id)"
         self.firstName = user.firstName
         self.lastName = user.lastName
         self.birthday = user.birthday
-        self.age = user.age
+        self.age = user.age != nil ? "\(user.age!)" : nil
         self.email = user.email
         self.mobile = user.mobile
         self.address = user.address

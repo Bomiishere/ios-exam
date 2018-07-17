@@ -13,7 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserListTableViewCell" rowHeight="71" id="KGk-i7-Jjw" customClass="UserListTableViewCell" customModule="UserListsMVVM" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="UserListTableViewCell" rowHeight="71" id="KGk-i7-Jjw" customClass="UserListTableViewCell" customModule="UserListsMVVM" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -21,7 +21,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEd-Z1-Bqk">
-                        <rect key="frame" x="28" y="27" width="256" height="30"/>
+                        <rect key="frame" x="28" y="36" width="260" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -33,14 +33,24 @@
                             <constraint firstAttribute="height" constant="1" id="p40-Rz-RxN"/>
                         </constraints>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="MQ1-Ja-cr4">
+                        <rect key="frame" x="296" y="36" width="16" height="21"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="hEV-og-5XH"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="iEd-Z1-Bqk" secondAttribute="trailing" constant="20" id="1h3-7Z-Q04"/>
-                    <constraint firstItem="iEd-Z1-Bqk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="16" id="ENJ-RF-oMT"/>
+                    <constraint firstItem="iEd-Z1-Bqk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="25" id="ENJ-RF-oMT"/>
                     <constraint firstAttribute="trailing" secondItem="1es-Fh-zCI" secondAttribute="trailing" constant="8" id="Ycx-Jb-f8Y"/>
+                    <constraint firstAttribute="trailing" secondItem="MQ1-Ja-cr4" secondAttribute="trailing" constant="8" id="Yz8-Sf-LGr"/>
                     <constraint firstItem="iEd-Z1-Bqk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="12" id="b7P-id-Bze"/>
+                    <constraint firstItem="MQ1-Ja-cr4" firstAttribute="bottom" secondItem="iEd-Z1-Bqk" secondAttribute="bottom" id="f9N-36-vdh"/>
                     <constraint firstItem="1es-Fh-zCI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="lOt-8z-982"/>
                     <constraint firstAttribute="bottomMargin" secondItem="iEd-Z1-Bqk" secondAttribute="bottom" constant="3" id="niF-VZ-71F"/>
+                    <constraint firstItem="MQ1-Ja-cr4" firstAttribute="leading" secondItem="iEd-Z1-Bqk" secondAttribute="trailing" constant="8" id="nps-A3-hC1"/>
+                    <constraint firstItem="MQ1-Ja-cr4" firstAttribute="top" secondItem="iEd-Z1-Bqk" secondAttribute="top" id="wAK-6B-2CX"/>
                     <constraint firstAttribute="bottom" secondItem="1es-Fh-zCI" secondAttribute="bottom" id="y5T-rK-gGx"/>
                 </constraints>
             </tableViewCellContentView>
@@ -51,4 +61,7 @@
             <point key="canvasLocation" x="34" y="67.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="arrow" width="12" height="12"/>
+    </resources>
 </document>

@@ -28,7 +28,7 @@ class DataLoader: NetworkService {
         let request: URLRequest = {
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
-            request.setValue("c91432a9b67d080e9bbc25a12553dedd#0#examId", forHTTPHeaderField: "authorization")
+            request.allHTTPHeaderFields = headers
             return request
         }()
         
