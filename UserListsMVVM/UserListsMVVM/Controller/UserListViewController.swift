@@ -66,5 +66,31 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
         pvc.viewModel = UserDetailViewModel(user: self.viewModel.users[indexPath.row])
         self.navigationController?.pushViewController(pvc, animated: true)
     }
+    
+    //MARK: <ScrollView Delegate>
+    
+    var isScrollToBottom: Bool = false
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let offset = scrollView.contentOffset
+        let bounds = scrollView.bounds
+        let size = scrollView.contentSize
+        let inset = scrollView.contentInset
+        let y: Float = Float(offset.y) + Float(bounds.size.height) + Float(inset.bottom)
+        let height: Float = Float(size.height)
+        let distance: Float = 30
+
+        if y > height + distance {
+            isScrollToBottom = true
+        }
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        if isScrollToBottom {
+            self.viewModel.loadUsers()
+            isScrollToBottom = false
+        }
+    }
 }
 

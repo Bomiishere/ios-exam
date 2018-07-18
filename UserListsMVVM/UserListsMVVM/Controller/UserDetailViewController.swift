@@ -25,7 +25,7 @@ class UserDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         
         self.title = self.viewModel.title
-        
+
     }
     
     //MARK: <TableView Datasource>

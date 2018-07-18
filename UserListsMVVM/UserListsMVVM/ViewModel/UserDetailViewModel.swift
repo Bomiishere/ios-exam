@@ -16,6 +16,7 @@ struct UserDetailViewModel {
 }
 
 extension UserDetailViewModel {
+    
     init(user: UserViewModel) {
         self.user = user
         

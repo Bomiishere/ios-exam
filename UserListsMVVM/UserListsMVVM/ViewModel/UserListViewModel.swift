@@ -50,7 +50,7 @@ extension UserListViewModel {
                 
                 let userViewModels = users.compactMap({ UserViewModel(user: $0) })
               
-                mutatingSelf.users = userViewModels
+                mutatingSelf.users.append(contentsOf: userViewModels)
             })
             
         }

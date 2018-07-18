@@ -15,6 +15,7 @@ protocol UserProvidable {
 class UserProvider: UserProvidable {
     
     private var dataLoader: NetworkService
+    
     private var url: URL? {
         let urlComp = NSURLComponents(string: "http://123.192.166.185/api/users/userinfo")!
         var items = [URLQueryItem]()
@@ -25,16 +26,23 @@ class UserProvider: UserProvidable {
         if !items.isEmpty {
             urlComp.queryItems = items
         }
+        
         return urlComp.url
     }
+    
     private var params: [String: String] {
         return ["index": "\(offset)", "size": "\(size)"]
     }
-    private var headers: [String: String]? = ["authorization" : "c91432a9b67d080e9bbc25a12553dedd#0#examId"]
+    
+    private var headers: [String: String]? = ["authorization" : "c91432a9b67d080e9bbc25a12553dedd#0#examId"] // fake
+    
     private var offset = 0
+    
     private let size = 10
     
     private var requestToken: RequestToken? = nil
+    
+    private let userCache = NSCache<NSString, NSData>()
     
     init(dataLoader: DataLoader) {
         self.dataLoader = dataLoader
@@ -42,11 +50,30 @@ class UserProvider: UserProvidable {
     
     func getUsers(completion: @escaping ([User]?, Error?) -> Void) {
         
-        guard let url = url else {
+        guard let url = self.url else {
             completion(nil, NetworkError.URLFormFail)
             return
         }
         
+        //Cache
+        if let cacheData = self.userCache.object(forKey: NSString(string: url.absoluteString)) {
+            
+            do {
+                let users = try JSONDecoder().decode([User].self, from: Data(referencing: cacheData))
+                
+                completion(users, nil)
+                
+                return
+                
+            } catch {
+                
+                completion(nil, error)
+                
+                return
+            }
+        }
+        
+        //Requst
         requestToken = dataLoader.getData(url: url, headers: headers, completion: { [unowned self] (result) in
             
             switch result {
@@ -66,6 +93,11 @@ class UserProvider: UserProvidable {
                     
                     //transfer to model
                     let usersArrData = try JSONSerialization.data(withJSONObject: usersJsonObject, options: .prettyPrinted)
+                    
+                    
+                    // save cache
+                    self.userCache.setObject(NSData(data: usersArrData), forKey: NSString(string: url.absoluteString))
+                    
                     let users = try decoder.decode([User].self, from: usersArrData)
                     
                     self.offset += self.size
