@@ -36,7 +36,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1Qa-KL-RGM"/>
+                    <navigationItem key="navigationItem" id="1Qa-KL-RGM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="ONS-yx-oV9">
+                            <connections>
+                                <action selector="refreshButtonTapped:" destination="BYZ-38-t0r" id="MyC-Vv-bUK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="zS6-Eb-HnE" id="85S-Pk-gEC"/>
                         <segue destination="Og9-ah-k02" kind="show" identifier="UserDetailViewControllerSegue" id="1P2-PB-6am"/>

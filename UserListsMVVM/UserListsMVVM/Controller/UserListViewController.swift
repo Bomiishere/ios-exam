@@ -51,7 +51,7 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
             
             let userViewModels = users.compactMap({ UserViewModel(user: $0) })
             
-            self.viewModel = UserListViewModel(users: userViewModels)
+            self.viewModel.users.append(contentsOf: userViewModels)
         }
     }
     
@@ -86,5 +86,13 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
         pvc.viewModel = UserDetailViewModel(user: self.viewModel.users[indexPath.row])
         self.navigationController?.pushViewController(pvc, animated: true)
     }
+    
+    //MARK: <Target Action>
+    
+    @IBAction func refreshButtonTapped(_ sender: Any) {
+        
+        self.loadUsers()
+    }
+    
 }
 
