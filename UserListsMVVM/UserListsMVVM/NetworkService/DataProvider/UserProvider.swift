@@ -16,7 +16,7 @@ class UserProvider: UserProvidable {
     
     private var dataLoader: NetworkService
     private var url: URL? {
-        let urlComp = NSURLComponents(string: "http://123.192.166.185/api/User/AllUser")!
+        let urlComp = NSURLComponents(string: "http://123.192.166.185/api/users/userinfo")!
         var items = [URLQueryItem]()
         for (key,value) in params {
             items.append(URLQueryItem(name: key, value: value))
@@ -57,9 +57,9 @@ class UserProvider: UserProvidable {
                 
                 do {
                     //parse
-                    let usersJson = try JSONSerialization.jsonObject(with: data, options: [])
+                    let dataJson = try JSONSerialization.jsonObject(with: data, options: [])
                     
-                    guard let usersJsonObject = usersJson as? [NSDictionary] else {
+                    guard let data = dataJson as? [String: AnyObject], let usersJsonObject = data[ParserKey.users] as? [NSDictionary] else {
                         completion (nil, NetworkError.parseError)
                         return
                     }

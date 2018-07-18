@@ -8,15 +8,14 @@
 
 import UIKit
 
-class UserListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    private let userProvider: UserProvider = UserProvider(dataLoader: DataLoader())
+class UserListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, Viewer {
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var viewModel: UserListViewModel = UserListViewModel() {
-        
+    internal var viewModel: UserListViewModel! {
         didSet {
+            self.title = self.viewModel.title
+            
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -30,35 +29,16 @@ class UserListViewController: UIViewController, UITableViewDelegate, UITableView
         
         self.tableView.tableFooterView = UIView()
         
-        self.title = self.viewModel.title
+        self.viewModel = UserListViewModel(vc: self)
         
-        self.loadUsers()
-    }
-    
-    private func loadUsers() {
-        
-        userProvider.getUsers { (users, error) in
-            
-            if let error = error {
-                //TODO: Handle errors
-                print(error)
-                return
-            }
-            
-            guard let users = users else {
-                return;
-            }
-            
-            let userViewModels = users.compactMap({ UserViewModel(user: $0) })
-            
-            self.viewModel = UserListViewModel(users: userViewModels)
-        }
+        self.viewModel.loadUsers()
     }
     
     //MARK: <TableView Datasource>
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel.users.count
+        guard let viewModel = self.viewModel else { return 0 }
+        return viewModel.users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

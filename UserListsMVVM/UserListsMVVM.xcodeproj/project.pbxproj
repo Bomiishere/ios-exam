@@ -25,6 +25,8 @@
 		F440F1AD20FB2CF9008F4DF5 /* UserListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F440F1AB20FB2CF9008F4DF5 /* UserListTableViewCell.xib */; };
 		F440F1AF20FB31FC008F4DF5 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F1AE20FB31FC008F4DF5 /* UserDetailViewController.swift */; };
 		F440F1B120FB3461008F4DF5 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F1B020FB3461008F4DF5 /* UserDetailViewModel.swift */; };
+		F440F1B420FF6275008F4DF5 /* MutatingClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F1B320FF6275008F4DF5 /* MutatingClosure.swift */; };
+		F440F1B620FF6371008F4DF5 /* Binder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F1B520FF6371008F4DF5 /* Binder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		F440F1AB20FB2CF9008F4DF5 /* UserListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListTableViewCell.xib; sourceTree = "<group>"; };
 		F440F1AE20FB31FC008F4DF5 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		F440F1B020FB3461008F4DF5 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
+		F440F1B320FF6275008F4DF5 /* MutatingClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutatingClosure.swift; sourceTree = "<group>"; };
+		F440F1B520FF6371008F4DF5 /* Binder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 			children = (
 				F440F17F20FB167F008F4DF5 /* AppDelegate.swift */,
 				F440F18320FB167F008F4DF5 /* Main.storyboard */,
+				F440F1B720FF6378008F4DF5 /* Protocols */,
 				F440F19320FB17C5008F4DF5 /* NetworkService */,
 				F440F19120FB17B8008F4DF5 /* Model */,
 				F440F19220FB17BF008F4DF5 /* ViewModel */,
@@ -149,6 +154,15 @@
 				F440F19C20FB1B76008F4DF5 /* FakeData.swift */,
 			);
 			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		F440F1B720FF6378008F4DF5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F440F1B520FF6371008F4DF5 /* Binder.swift */,
+				F440F1B320FF6275008F4DF5 /* MutatingClosure.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +248,9 @@
 				F440F19520FB17FA008F4DF5 /* User.swift in Sources */,
 				F440F1A120FB1B76008F4DF5 /* PaserKey.swift in Sources */,
 				F440F1A420FB1B76008F4DF5 /* UserProvider.swift in Sources */,
+				F440F1B620FF6371008F4DF5 /* Binder.swift in Sources */,
 				F440F19920FB1ACD008F4DF5 /* UserListViewModel.swift in Sources */,
+				F440F1B420FF6275008F4DF5 /* MutatingClosure.swift in Sources */,
 				F440F1A520FB1B76008F4DF5 /* RequestToken.swift in Sources */,
 				F440F1A320FB1B76008F4DF5 /* DataLoader.swift in Sources */,
 			);
