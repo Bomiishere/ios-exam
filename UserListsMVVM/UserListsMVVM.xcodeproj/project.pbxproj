@@ -27,6 +27,7 @@
 		F440F1B120FB3461008F4DF5 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F1B020FB3461008F4DF5 /* UserDetailViewModel.swift */; };
 		F440F1B420FF6275008F4DF5 /* MutatingClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F1B320FF6275008F4DF5 /* MutatingClosure.swift */; };
 		F440F1B620FF6371008F4DF5 /* Binder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F1B520FF6371008F4DF5 /* Binder.swift */; };
+		F440F1B920FF769C008F4DF5 /* Viewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F440F1B820FF769C008F4DF5 /* Viewer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		F440F1B020FB3461008F4DF5 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 		F440F1B320FF6275008F4DF5 /* MutatingClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutatingClosure.swift; sourceTree = "<group>"; };
 		F440F1B520FF6371008F4DF5 /* Binder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binder.swift; sourceTree = "<group>"; };
+		F440F1B820FF769C008F4DF5 /* Viewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viewer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 		F440F1B720FF6378008F4DF5 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				F440F1B820FF769C008F4DF5 /* Viewer.swift */,
 				F440F1B520FF6371008F4DF5 /* Binder.swift */,
 				F440F1B320FF6275008F4DF5 /* MutatingClosure.swift */,
 			);
@@ -251,6 +254,7 @@
 				F440F1B620FF6371008F4DF5 /* Binder.swift in Sources */,
 				F440F19920FB1ACD008F4DF5 /* UserListViewModel.swift in Sources */,
 				F440F1B420FF6275008F4DF5 /* MutatingClosure.swift in Sources */,
+				F440F1B920FF769C008F4DF5 /* Viewer.swift in Sources */,
 				F440F1A520FB1B76008F4DF5 /* RequestToken.swift in Sources */,
 				F440F1A320FB1B76008F4DF5 /* DataLoader.swift in Sources */,
 			);

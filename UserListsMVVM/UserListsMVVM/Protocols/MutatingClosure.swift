@@ -6,15 +6,15 @@
 //  Copyright © 2018年 Bomi. All rights reserved.
 //
 
-import UIKit
-
 public protocol MutatingClosure {
     
     var binder: Binder? { get }
     
     func mutating(_ closure: (_ mutatingSelf: inout Self) -> Void) -> Void
     
-    // 立即寫回ViewController
+    /**
+     Immediately write back to ViewController
+     */
     func commit()
     
 }
@@ -30,11 +30,13 @@ extension MutatingClosure {
         closure(&viewModel)
         
         binder?.dataContext = viewModel
-        
+
     }
     
     public func commit() {
+        
         binder?.dataContext = self
+        
     }
-    
+
 }
